@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shrikant Aher | Software Developer & Blockchain Engineer</title>
+  <meta name="description" content="Portfolio of Shrikant Aher - Full Stack Software Developer & Blockchain Engineer specializing in Java, React.js, Solidity, Smart Contracts, Ethereum, and MySQL.">
+  <meta name="keywords" content="Shrikant Aher, Software Developer, Blockchain Developer, Solidity, React.js, Web3, Java, Smart Contracts, Portfolio">
+  <meta name="author" content="Shrikant Aher">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:title" content="Shrikant Aher | Software Developer & Blockchain Engineer">
+  <meta property="og:description" content="Explore projects, skills, experience, and certifications of Shrikant Aher.">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Dynamic Interactive Particle Background Canvas -->
+  <canvas id="bgCanvas"></canvas>
+
+  <!-- Ambient Glowing Blobs -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
+
+  <!-- Custom Glow Cursor Follower -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-outline" id="cursorOutline"></div>
+
+  <!-- Header / Navigation Bar -->
+  <header class="navbar-wrapper" id="navbar">
+    <nav class="navbar container">
+      <a href="#hero" class="logo">
+        <span class="logo-bracket">&lt;</span>
+        <span class="logo-text">SA</span>
+        <span class="logo-slash">/</span>
+        <span class="logo-bracket">&gt;</span>
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Navbar Actions -->
+      <div class="nav-actions">
+        <!-- Theme Toggle -->
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme" title="Toggle Light/Dark Mode">
+          <i class="fa-solid fa-moon moon-icon"></i>
+          <i class="fa-solid fa-sun sun-icon"></i>
+        </button>
+
+        <!-- Resume Modal Trigger -->
+        <div class="resume-button-container">
+          <button class="btn btn-sm btn-outline cv-btn" id="resumeDropdownBtn" aria-expanded="false">
+            <i class="fa-solid fa-file-arrow-down"></i>
+            <span>Resume</span>
+            <i class="fa-solid fa-chevron-down caret"></i>
+          </button>
+
+          <!-- Resume Dropdown Menu -->
+          <div class="resume-dropdown" id="resumeDropdown">
+            <a href="assets/resume-software-developer.pdf" target="_blank" class="dropdown-item" download="Shrikant_Aher_Software_Developer_Resume.pdf">
+              <i class="fa-solid fa-code"></i>
+              <div>
+                <span class="title">Software Developer CV</span>
+                <span class="sub">Java, React, MySQL, Testing</span>
+              </div>
+            </a>
+            <a href="assets/resume-blockchain.pdf" target="_blank" class="dropdown-item" download="Shrikant_Aher_Blockchain_Resume.pdf">
+              <i class="fa-brands fa-ethereum"></i>
+              <div>
+                <span class="title">Blockchain Tech CV</span>
+                <span class="sub">Solidity, Web3, DApps, Smart Contracts</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Drawer Overlay Menu -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div class="drawer-header">
+      <a href="#hero" class="logo">
+        <span class="logo-bracket">&lt;</span>
+        <span class="logo-text">SA</span>
+        <span class="logo-slash">/</span>
+        <span class="logo-bracket">&gt;</span>
+      </a>
+      <button class="drawer-close" id="drawerClose"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="#about" class="mobile-nav-link"><i class="fa-regular fa-user"></i> About</a></li>
+      <li><a href="#skills" class="mobile-nav-link"><i class="fa-solid fa-code"></i> Skills</a></li>
+      <li><a href="#experience" class="mobile-nav-link"><i class="fa-solid fa-briefcase"></i> Experience</a></li>
+      <li><a href="#projects" class="mobile-nav-link"><i class="fa-solid fa-laptop-code"></i> Projects</a></li>
+      <li><a href="#education" class="mobile-nav-link"><i class="fa-solid fa-graduation-cap"></i> Education</a></li>
+      <li><a href="#contact" class="mobile-nav-link"><i class="fa-regular fa-envelope"></i> Contact</a></li>
+    </ul>
+    <div class="mobile-drawer-resumes">
+      <span class="drawer-subheading">Download Resumes</span>
+      <a href="assets/resume-software-developer.pdf" target="_blank" class="btn btn-outline btn-full" download="Shrikant_Aher_Software_Developer_Resume.pdf">
+        <i class="fa-solid fa-file-code"></i> Software Dev CV
+      </a>
+      <a href="assets/resume-blockchain.pdf" target="_blank" class="btn btn-outline btn-full" download="Shrikant_Aher_Blockchain_Resume.pdf">
+        <i class="fa-brands fa-ethereum"></i> Blockchain CV
+      </a>
+    </div>
+  </div>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section section" id="hero">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <!-- Status Pill -->
+          <div class="status-badge reveal-fade">
+            <span class="pulse-dot"></span>
+            <span>Available for Full-time Roles & Projects</span>
+          </div>
+
+          <h1 class="hero-title reveal-fade">
+            Hi, I'm <span class="gradient-text">Shrikant Aher</span>
+          </h1>
+
+          <!-- Animated Role Typewriter -->
+          <div class="typewriter-container reveal-fade">
+            <span class="typewriter-prefix">I am a </span>
+            <span class="typewriter-text" id="typewriter"></span>
+            <span class="typewriter-cursor">|</span>
+          </div>
+
+          <p class="hero-description reveal-fade">
+            Driven and detail-oriented Software Developer & Blockchain Engineer. I craft robust web applications, responsive frontend interfaces, and gas-efficient smart contracts using Java, React.js, Solidity, and Modern Web Architectures.
+          </p>
+
+          <!-- Action Buttons -->
+          <div class="hero-cta-group reveal-fade">
+            <a href="#projects" class="btn btn-primary glow-btn">
+              <span>Explore My Work</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <span>Let's Connect</span>
+              <i class="fa-regular fa-paper-plane"></i>
+            </a>
+          </div>
+
+          <!-- Social Links -->
+          <div class="hero-socials reveal-fade">
+            <span class="social-label">Connect:</span>
+            <div class="social-icons">
+              <a href="https://www.linkedin.com/in/shrikant-aher-2936382bb" target="_blank" rel="noopener noreferrer" class="social-btn" title="LinkedIn" aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a href="https://github.com/Shrikant1a" target="_blank" rel="noopener noreferrer" class="social-btn" title="GitHub" aria-label="GitHub">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="mailto:shrikantaher2004@gmail.com" class="social-btn" title="Send Email" aria-label="Email">
+                <i class="fa-solid fa-envelope"></i>
+              </a>
+              <a href="tel:+918149642840" class="social-btn" title="Call Me" aria-label="Phone">
+                <i class="fa-solid fa-phone"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual Showcase / Profile Card -->
+        <div class="hero-visual reveal-fade">
+          <div class="profile-card-wrapper">
+            <!-- Animated Gradient Orbit Ring -->
+            <div class="orbit-ring"></div>
+            
+            <div class="profile-card glass-card">
+              <div class="image-wrapper">
+                <img src="assets/shrikant-profile.jpg" alt="Shrikant Aher - Software Developer & Blockchain Engineer" class="profile-img" loading="eager">
+                <div class="img-overlay-glow"></div>
+              </div>
+
+              <!-- Floating Tech Badges -->
+              <div class="floating-badge badge-solidity" title="Solidity & Smart Contracts">
+                <i class="fa-brands fa-ethereum"></i>
+                <span>Solidity</span>
+              </div>
+              <div class="floating-badge badge-react" title="React.js">
+                <i class="fa-brands fa-react"></i>
+                <span>React</span>
+              </div>
+              <div class="floating-badge badge-java" title="Java Development">
+                <i class="fa-brands fa-java"></i>
+                <span>Java</span>
+              </div>
+              <div class="floating-badge badge-mysql" title="MySQL & Databases">
+                <i class="fa-solid fa-database"></i>
+                <span>MySQL</span>
+              </div>
+
+              <!-- Experience Pill on Profile -->
+              <div class="profile-stat-pill">
+                <div class="stat-icon"><i class="fa-solid fa-certificate"></i></div>
+                <div class="stat-info">
+                  <span class="stat-title">PGD & BCS</span>
+                  <span class="stat-desc">Top 8.84 CGPA</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Metrics / Quick Stats Banner -->
+    <section class="stats-banner-section">
+      <div class="container">
+        <div class="stats-grid glass-card reveal-up">
+          <div class="stat-card">
+            <div class="stat-number" data-target="4">0</div>
+            <div class="stat-plus">+</div>
+            <div class="stat-title">Featured Projects</div>
+            <div class="stat-desc">DApps & Full-Stack Apps</div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-card">
+            <div class="stat-number" data-target="2">0</div>
+            <div class="stat-plus"></div>
+            <div class="stat-title">Internships</div>
+            <div class="stat-desc">SNP & Rise In (Stellar)</div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-card">
+            <div class="stat-number" data-target="8" data-decimal=".84">0</div>
+            <div class="stat-plus">★</div>
+            <div class="stat-title">University CGPA</div>
+            <div class="stat-desc">Savitribai Phule Pune Univ</div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-card">
+            <div class="stat-number" data-target="100">0</div>
+            <div class="stat-plus">%</div>
+            <div class="stat-title">Dedication</div>
+            <div class="stat-desc">Secure & Clean Code</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section class="about-section section" id="about">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <div class="section-tag"><i class="fa-regular fa-id-badge"></i> Introduction</div>
+          <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+          <p class="section-subtitle">Bridging Full-Stack Engineering and Decentralized Web3 Innovations</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-narrative glass-card reveal-up">
+            <div class="narrative-badge">
+              <i class="fa-solid fa-terminal"></i>
+              <span>Engineering Philosophy</span>
+            </div>
+            <h3>Passionate Developer Building Scalable & Trustless Solutions</h3>
+            <p>
+              I am a motivated Software Developer and Blockchain Specialist with hands-on expertise spanning modern frontend frameworks, backend architecture, relational database management, and decentralized smart contracts.
+            </p>
+            <p>
+              With academic honors from <strong>Savitribai Phule Pune University (8.84 CGPA in BCS and 8.32 in Blockchain PGD)</strong> and real-world internship experiences with <strong>SNP Innovation</strong> and <strong>RISE IN (Stellar Ecosystem)</strong>, I bridge the gap between user-centric web applications and tamper-proof blockchain networks.
+            </p>
+
+            <div class="about-highlights-grid">
+              <div class="highlight-item">
+                <div class="highlight-icon"><i class="fa-solid fa-cube"></i></div>
+                <div>
+                  <h4>Smart Contracts & Web3</h4>
+                  <p>Solidity, Ethereum, Stellar, MetaMask & Gas-Optimized logic.</p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <div class="highlight-icon"><i class="fa-solid fa-layer-group"></i></div>
+                <div>
+                  <h4>Full-Stack Development</h4>
+                  <p>React.js, Java, REST APIs, HTML5/CSS3 & Modern responsive UI.</p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <div class="highlight-icon"><i class="fa-solid fa-database"></i></div>
+                <div>
+                  <h4>Data & Backend</h4>
+                  <p>MySQL, JDBC, CRUD optimization & secure authentication.</p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <div class="highlight-icon"><i class="fa-solid fa-vial-circle-check"></i></div>
+                <div>
+                  <h4>Testing & Quality</h4>
+                  <p>Manual testing, Selenium automation & smart contract auditing.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-personal-info">
+              <div class="info-pill"><i class="fa-solid fa-location-dot"></i> Pune, Maharashtra 411009</div>
+              <div class="info-pill"><i class="fa-solid fa-language"></i> English, Hindi, Marathi</div>
+              <div class="info-pill"><i class="fa-solid fa-clock"></i> Quick Learner & Team Player</div>
+            </div>
+          </div>
+
+          <!-- Quick Info Cards -->
+          <div class="about-side-cards reveal-up">
+            <div class="info-card glass-card">
+              <div class="card-icon"><i class="fa-solid fa-shield-halved"></i></div>
+              <h4>Blockchain & DApp Focus</h4>
+              <p>Specialized in transparent product traceability, decentralized voting protocols, and Stellar token ecosystem integration.</p>
+              <div class="tag-cloud">
+                <span>Solidity</span>
+                <span>Ethereum</span>
+                <span>Stellar</span>
+                <span>Remix</span>
+                <span>MetaMask</span>
+              </div>
+            </div>
+
+            <div class="info-card glass-card">
+              <div class="card-icon"><i class="fa-solid fa-laptop-code"></i></div>
+              <h4>Full-Stack Capability</h4>
+              <p>Developing end-to-end applications from intuitive React UI to Java backend services and MySQL relational schemas.</p>
+              <div class="tag-cloud">
+                <span>React.js</span>
+                <span>Java</span>
+                <span>MySQL</span>
+                <span>JDBC</span>
+                <span>REST APIs</span>
+                <span>Tailwind</span>
+              </div>
+            </div>
+
+            <div class="resume-download-box glass-card">
+              <div class="box-content">
+                <i class="fa-solid fa-file-lines cv-large-icon"></i>
+                <div>
+                  <h4>Need a Detailed Resume?</h4>
+                  <p>Grab my verified resume tailored for Software Dev or Blockchain positions.</p>
+                </div>
+              </div>
+              <div class="box-actions">
+                <a href="assets/resume-software-developer.pdf" target="_blank" download="Shrikant_Aher_Software_Dev_Resume.pdf" class="btn btn-sm btn-primary">
+                  <i class="fa-solid fa-download"></i> Software Resume
+                </a>
+                <a href="assets/resume-blockchain.pdf" target="_blank" download="Shrikant_Aher_Blockchain_Resume.pdf" class="btn btn-sm btn-outline">
+                  <i class="fa-solid fa-download"></i> Blockchain Resume
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills-section section" id="skills">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <div class="section-tag"><i class="fa-solid fa-microchip"></i> Expertise</div>
+          <h2 class="section-title">Technical <span class="gradient-text">Skills</span></h2>
+          <p class="section-subtitle">A well-rounded toolkit across modern languages, Web3 frameworks, databases, and testing tools.</p>
+        </div>
+
+        <!-- Filter Category Tabs -->
+        <div class="filter-tabs reveal-up" id="skillsFilterTabs">
+          <button class="filter-btn active" data-filter="all">All Skills</button>
+          <button class="filter-btn" data-filter="blockchain">Blockchain & Web3</button>
+          <button class="filter-btn" data-filter="frontend">Frontend</button>
+          <button class="filter-btn" data-filter="backend">Backend & DB</button>
+          <button class="filter-btn" data-filter="tools">Testing & Tools</button>
+        </div>
+
+        <!-- Skills Grid -->
+        <div class="skills-grid" id="skillsGrid">
+          <!-- Blockchain Skills -->
+          <div class="skill-card glass-card reveal-up" data-category="blockchain">
+            <div class="skill-icon-wrap eth-glow">
+              <i class="fa-brands fa-ethereum"></i>
+            </div>
+            <div class="skill-details">
+              <div class="skill-name-row">
+                <h4>Solidity</h4>
+                <span class="skill-badge">Advanced</span>
+              </div>
+              <p>Smart contract development, ERC standards, gas optimization, access control.</p>
+              <div class="skill-bar"><div class="skill-progress" style="--percent: 90%;"></div></div>
+            </div>
+          </div>
+
+          <div class="skill-card glass-card reveal-up" data-category="blockchain">
+            <div class="skill-icon-wrap web3-glow">
+              <i class="fa-solid fa-link"></i>
+            </div>
+            <div class="skill-details">
+              <div class="skill-name-row">
+                <h4>Ethereum & Web3.js</h4>
+                <span class="skill-badge">Proficient</span>
+              </div>
+              <p>EVM interaction, dApp integration, MetaMask wallet connecting, testnets.</p>
+              <div class="skill-bar"><div class="skill-progress" style="--percent: 85%;"></div></div>
+            </div>
+          </div>
+
+          <div class="skill-card glass-card reveal-up" data-category="blockchain">
+            <div class="skill-icon-wrap stellar-glow">
+              <i class="fa-solid fa-meteor"></i>
+            </div>
+            <div class="skill-details">
+              <div class="skill-name-row">
+                <h4>Stellar Ecosystem</h4>
+                <span class="skill-badge">Trained</span>
+              </div>
+              <p>Stellar dApp architecture, Soroban contracts, token issuance & transfers.</p>
+              <div class="skill-bar"><div class="skill-progress" style="--percent: 80%;"></div></div>
+            </div>
+          </div>
+
+          <!-- Frontend Skills -->
+          <div class="skill-card glass-card reveal-up" data-category="frontend">
+            <div class="skill-icon-wrap react-glow">
+              <i class="fa-brands fa-react"></i>
+            </div>
+            <div class="skill-details">
+              <div class="skill-name-row">
+                <h4>React.js</h4>
+                <span class="skill-badge">Proficient</span>
+              </div>
+              <p>Component hierarchy, hooks, state management, SPA routing, responsive UI.</p>
+              <div class="skill-bar"><div class="skill-progress" style="--percent: 88%;"></div></div>
+            </div>
+          </div>
+
+          <div class="skill-card glass-card reveal-up" data-category="frontend">
+            <div class="skill-icon-wrap js-glow">
+              <i class="fa-brands fa-js"></i>
+            </div>
+            <div class="skill-details">
+              <div class="skill-name-row">
+                <h4>JavaScript (ES6+)</h4>
+                <span class="skill-badge">Proficient</span>
+              </div>
+              <p>Async/Await, DOM manipulation, promises, fetch API, modern syntax.</p>
+              <div class="skill-bar"><div class="skill-progress" style="--percent: 85%;"></div></div>
+            </div>
+          </div>
+
+          <div class="skill-card glass-card reveal-up" data-category="frontend">
+            <div class="skill-icon-wrap html-glow">
+              <i class="fa-brands fa-html5"></i>
+            </div>
+            <div class="skill-details">
+              <div class="skill-name-row">
+                <h4>HTML5 & CSS3</h4>
+                <span class="skill-badge">Expert</span>
+              </div>
+              <p>Semantic layouts, Flexbox/Grid, CSS keyframes, Tailwind CSS, media queries.</p>
+              <div class="skill-bar"><div class="skill-progress" style="--percent: 92%;"></div></div>
+            </div>
+          </div>
+
+          <!-- Backend & Database Skills -->
+          <div class="skill-card glass-card reveal-up" data-category="backend">
+            <div class="skill-icon-wrap java-glow">
+              <i class="fa-brands fa-java"></i>
+            </div>
+            <div class="skill-details">
+              <div class="skill-name-row">
+                <h4>Java (Core & Advanced)</h4>
+                <span class="skill-badge">Proficient</span>
+              </div>
+              <p>OOP concepts, Collections Framework, Multithreading, Exception handling.</p>
+              <div class="skill-bar"><div class="skill-progress" style="--percent: 86%;"></div></div>
+            </div>
+          </div>
+
+          <div class="skill-card glass-card reveal-up" data-category="backend">
+            <div class="skill-icon-wrap sql-glow">
+              <i class="fa-solid fa-database"></i>
+            </div>
+            <div class="skill-details">
+              <div class="skill-name-row">
+                <h4>MySQL & JDBC</h4>
+                <span class="skill-badge">Proficient</span>
+              </div>
+              <p>Relational schema design, complex joins, indexing, JDBC connection pooling.</p>
+              <div class="skill-bar"><div class="skill-progress" style="--percent: 84%;"></div></div>
+            </div>
+          </div>
+
+          <div class="skill-card glass-card reveal-up" data-category="backend">
+            <div class="skill-icon-wrap api-glow">
+              <i class="fa-solid fa-network-wired"></i>
+            </div>
+            <div class="skill-details">
+              <div class="skill-name-row">
+                <h4>REST APIs & Golang</h4>
+                <span class="skill-badge">Familiar</span>
+              </div>
+              <p>HTTP protocols, JSON serialization, endpoint routing, basic Golang services.</p>
+              <div class="skill-bar"><div class="skill-progress" style="--percent: 75%;"></div></div>
+            </div>
+          </div>
+
+          <!-- Testing & Tools -->
+          <div class="skill-card glass-card reveal-up" data-category="tools">
+            <div class="skill-icon-wrap test-glow">
+              <i class="fa-solid fa-vial"></i>
+            </div>
+            <div class="skill-details">
+              <div class="skill-name-row">
+                <h4>Software Testing</h4>
+                <span class="skill-badge">Proficient</span>
+              </div>
+              <p>Manual testing, test cases, bug lifecycles & Selenium test automation.</p>
+              <div class="skill-bar"><div class="skill-progress" style="--percent: 82%;"></div></div>
+            </div>
+          </div>
+
+          <div class="skill-card glass-card reveal-up" data-category="tools">
+            <div class="skill-icon-wrap git-glow">
+              <i class="fa-brands fa-git-alt"></i>
+            </div>
+            <div class="skill-details">
+              <div class="skill-name-row">
+                <h4>Git & GitHub</h4>
+                <span class="skill-badge">Advanced</span>
+              </div>
+              <p>Version control, branching strategies, collaborative workflows, CI/CD.</p>
+              <div class="skill-bar"><div class="skill-progress" style="--percent: 88%;"></div></div>
+            </div>
+          </div>
+
+          <div class="skill-card glass-card reveal-up" data-category="tools">
+            <div class="skill-icon-wrap tool-glow">
+              <i class="fa-solid fa-screwdriver-wrench"></i>
+            </div>
+            <div class="skill-details">
+              <div class="skill-name-row">
+                <h4>Dev Tools & Cloud Basics</h4>
+                <span class="skill-badge">Proficient</span>
+              </div>
+              <p>VS Code, Remix IDE, Postman, Eclipse, Netlify, Vercel & Networking basics.</p>
+              <div class="skill-bar"><div class="skill-progress" style="--percent: 86%;"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience & Internships Section -->
+    <section class="experience-section section" id="experience">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <div class="section-tag"><i class="fa-solid fa-briefcase"></i> Journey</div>
+          <h2 class="section-title">Work <span class="gradient-text">Experience</span></h2>
+          <p class="section-subtitle">Real-world industry internships in blockchain engineering and decentralized networks.</p>
+        </div>
+
+        <div class="timeline">
+          <!-- Timeline Item 1 -->
+          <div class="timeline-item reveal-up">
+            <div class="timeline-dot-wrap">
+              <div class="timeline-dot"><i class="fa-solid fa-rocket"></i></div>
+            </div>
+            <div class="timeline-content glass-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="role-title">Blockchain Intern</h3>
+                  <h4 class="company-name"><i class="fa-solid fa-building"></i> RISE IN (Stellar Ecosystem)</h4>
+                </div>
+                <div class="timeline-date">
+                  <span class="date-badge"><i class="fa-regular fa-calendar"></i> March 2026 – May 2026</span>
+                  <span class="status-tag completed">Completed</span>
+                </div>
+              </div>
+              <p class="timeline-description">
+                Engaged in deep-dive training and project building within the <strong>Stellar Blockchain Ecosystem</strong>. Focused on Soroban smart contract development, transaction validation protocols, and decentralized finance primitives.
+              </p>
+              <ul class="timeline-bullets">
+                <li>Built and analyzed dApp prototypes utilizing Stellar SDKs and decentralized ledger state.</li>
+                <li>Participated in ecosystem security workshops and contract gas-efficiency benchmarks.</li>
+                <li>Collaborated with international Web3 developers on cross-border payment flow concepts.</li>
+              </ul>
+              <div class="timeline-tags">
+                <span>Stellar</span>
+                <span>Soroban</span>
+                <span>DApps</span>
+                <span>Web3</span>
+                <span>Smart Contracts</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 2 -->
+          <div class="timeline-item reveal-up">
+            <div class="timeline-dot-wrap">
+              <div class="timeline-dot"><i class="fa-solid fa-cube"></i></div>
+            </div>
+            <div class="timeline-content glass-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="role-title">Blockchain Developer Intern</h3>
+                  <h4 class="company-name"><i class="fa-solid fa-building"></i> SNP Innovation Pvt. Ltd</h4>
+                </div>
+                <div class="timeline-date">
+                  <span class="date-badge"><i class="fa-regular fa-calendar"></i> Sept 2025 – Feb 2026</span>
+                  <span class="status-tag completed">Completed</span>
+                </div>
+              </div>
+              <p class="timeline-description">
+                Developed enterprise-grade smart contracts and integrated decentralized backends with modern frontend user interfaces.
+              </p>
+              <ul class="timeline-bullets">
+                <li>Authored and audited Solidity smart contracts adhering to security best practices to prevent vulnerabilities.</li>
+                <li>Conducted extensive testing on Ethereum testnets (Sepolia) utilizing Remix IDE and MetaMask.</li>
+                <li>Streamlined contract logic to achieve significant gas savings during deployment and transaction execution.</li>
+              </ul>
+              <div class="timeline-tags">
+                <span>Solidity</span>
+                <span>Ethereum</span>
+                <span>Remix IDE</span>
+                <span>MetaMask</span>
+                <span>Gas Optimization</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section section" id="projects">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <div class="section-tag"><i class="fa-solid fa-code-branch"></i> Portfolio</div>
+          <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+          <p class="section-subtitle">Handcrafted applications showcasing full-stack capabilities and decentralized architectures.</p>
+        </div>
+
+        <!-- Project Filter Buttons -->
+        <div class="filter-tabs reveal-up" id="projectFilterTabs">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="blockchain">Blockchain & DApps</button>
+          <button class="filter-btn" data-filter="fullstack">Full-Stack Web</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid" id="projectsGrid">
+          <!-- Project 1: Decentralized Voting System -->
+          <div class="project-card glass-card reveal-up" data-category="blockchain">
+            <div class="project-header-visual dapps-visual">
+              <div class="visual-icon"><i class="fa-solid fa-check-to-slot"></i></div>
+              <div class="project-year-badge">2025</div>
+              <span class="project-category-badge">Web3 / DApp</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Decentralized Voting System (DApp)</h3>
+              <p class="project-desc">
+                A tamper-proof, transparent electronic voting smart contract deployed on Ethereum testnet ensuring strict voter privacy and unalterable on-chain tallies.
+              </p>
+              <ul class="project-features">
+                <li><i class="fa-solid fa-circle-check"></i> Strict one-vote-per-address cryptographic logic</li>
+                <li><i class="fa-solid fa-circle-check"></i> Gas-optimized state variables & modifiers</li>
+                <li><i class="fa-solid fa-circle-check"></i> MetaMask integration with Remix testing suite</li>
+              </ul>
+              <div class="project-tech-stack">
+                <span>Solidity</span>
+                <span>Ethereum</span>
+                <span>Remix</span>
+                <span>MetaMask</span>
+                <span>Web3.js</span>
+              </div>
+              <div class="project-actions">
+                <button class="btn btn-sm btn-primary project-modal-trigger" data-project="voting">
+                  <i class="fa-regular fa-eye"></i> View Details
+                </button>
+                <a href="https://github.com/Shrikant1a" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: Seed-Tracking DApp -->
+          <div class="project-card glass-card reveal-up" data-category="blockchain">
+            <div class="project-header-visual supply-visual">
+              <div class="visual-icon"><i class="fa-solid fa-seedling"></i></div>
+              <div class="project-year-badge">2025</div>
+              <span class="project-category-badge">Supply Chain Web3</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Seed-Tracking DApp (Solidity)</h3>
+              <p class="project-desc">
+                An end-to-end decentralized supply chain tracking solution for agricultural seeds, ensuring authenticity and preventing counterfeit products.
+              </p>
+              <ul class="project-features">
+                <li><i class="fa-solid fa-circle-check"></i> Product batch registration & unique UID generation</li>
+                <li><i class="fa-solid fa-circle-check"></i> Tamper-evident ownership transfer along supply chain</li>
+                <li><i class="fa-solid fa-circle-check"></i> Transparent immutable audit log for end-farmers</li>
+              </ul>
+              <div class="project-tech-stack">
+                <span>Solidity</span>
+                <span>Ethereum</span>
+                <span>Smart Contracts</span>
+                <span>Remix</span>
+                <span>Security Audits</span>
+              </div>
+              <div class="project-actions">
+                <button class="btn btn-sm btn-primary project-modal-trigger" data-project="seed">
+                  <i class="fa-regular fa-eye"></i> View Details
+                </button>
+                <a href="https://github.com/Shrikant1a" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: Fuel Management & Booking System -->
+          <div class="project-card glass-card reveal-up" data-category="fullstack">
+            <div class="project-header-visual fuel-visual">
+              <div class="visual-icon"><i class="fa-solid fa-gas-pump"></i></div>
+              <div class="project-year-badge">2025</div>
+              <span class="project-category-badge">Full Stack System</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Fuel Management & Booking System</h3>
+              <p class="project-desc">
+                A comprehensive full-stack petrol pump booking and fleet management system with live fuel pricing, inventory monitoring, and responsive client portal.
+              </p>
+              <ul class="project-features">
+                <li><i class="fa-solid fa-circle-check"></i> Real-time dynamic fuel pricing calculation & booking</li>
+                <li><i class="fa-solid fa-circle-check"></i> Service request management for station operations</li>
+                <li><i class="fa-solid fa-circle-check"></i> React.js frontend with Tailwind CSS styling</li>
+              </ul>
+              <div class="project-tech-stack">
+                <span>React.js</span>
+                <span>Java</span>
+                <span>MySQL</span>
+                <span>Tailwind CSS</span>
+                <span>REST API</span>
+              </div>
+              <div class="project-actions">
+                <button class="btn btn-sm btn-primary project-modal-trigger" data-project="fuel">
+                  <i class="fa-regular fa-eye"></i> View Details
+                </button>
+                <a href="https://github.com/Shrikant1a" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4: Job Portal Web Application -->
+          <div class="project-card glass-card reveal-up" data-category="fullstack">
+            <div class="project-header-visual job-visual">
+              <div class="visual-icon"><i class="fa-solid fa-briefcase"></i></div>
+              <div class="project-year-badge">2024</div>
+              <span class="project-category-badge">Web Application</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Job Portal Web Application</h3>
+              <p class="project-desc">
+                A full-featured recruitment platform connecting job seekers with recruiters, featuring custom applicant tracking and role-based access.
+              </p>
+              <ul class="project-features">
+                <li><i class="fa-solid fa-circle-check"></i> Secure authentication for candidates & recruiters</li>
+                <li><i class="fa-solid fa-circle-check"></i> Job posting, resume uploads, and application tracker</li>
+                <li><i class="fa-solid fa-circle-check"></i> High-performance relational queries with MySQL</li>
+              </ul>
+              <div class="project-tech-stack">
+                <span>React.js</span>
+                <span>Java</span>
+                <span>MySQL</span>
+                <span>REST APIs</span>
+                <span>Responsive CSS</span>
+              </div>
+              <div class="project-actions">
+                <button class="btn btn-sm btn-primary project-modal-trigger" data-project="job">
+                  <i class="fa-regular fa-eye"></i> View Details
+                </button>
+                <a href="https://github.com/Shrikant1a" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education-section section" id="education">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <div class="section-tag"><i class="fa-solid fa-graduation-cap"></i> Academic Background</div>
+          <h2 class="section-title">Education & <span class="gradient-text">Qualifications</span></h2>
+          <p class="section-subtitle">Strong academic foundation with honors in Computer Science and Blockchain specializations.</p>
+        </div>
+
+        <div class="education-grid">
+          <!-- Edu Card 1 -->
+          <div class="edu-card glass-card reveal-up">
+            <div class="edu-top">
+              <div class="edu-badge"><i class="fa-solid fa-shield-halved"></i> Post Graduate</div>
+              <span class="edu-year">2024 – 2025</span>
+            </div>
+            <h3 class="edu-degree">Advanced Course in Blockchain Technology (PGD)</h3>
+            <h4 class="edu-institution"><i class="fa-solid fa-university"></i> Savitribai Phule Pune University</h4>
+            <div class="edu-score">
+              <div class="score-pill">
+                <span class="score-label">CGPA</span>
+                <span class="score-value">8.32 / 10.0</span>
+              </div>
+              <span class="score-honors">First Class Distinction</span>
+            </div>
+            <p class="edu-desc">
+              Specialized in Cryptography, Consensus Protocols, Distributed Ledger Technology, Ethereum EVM internals, and Smart Contract Security.
+            </p>
+          </div>
+
+          <!-- Edu Card 2 -->
+          <div class="edu-card glass-card reveal-up">
+            <div class="edu-top">
+              <div class="edu-badge"><i class="fa-solid fa-laptop-code"></i> Graduation</div>
+              <span class="edu-year">2021 – 2024</span>
+            </div>
+            <h3 class="edu-degree">Bachelor of Computer Science (BCS)</h3>
+            <h4 class="edu-institution"><i class="fa-solid fa-university"></i> Savitribai Phule Pune University</h4>
+            <div class="edu-score">
+              <div class="score-pill">
+                <span class="score-label">CGPA</span>
+                <span class="score-value">8.84 / 10.0</span>
+              </div>
+              <span class="score-honors">Outstanding Grade</span>
+            </div>
+            <p class="edu-desc">
+              Core studies in Data Structures, Algorithms, OOP with Java, Database Management Systems (DBMS), Operating Systems, Software Engineering, and Computer Networks.
+            </p>
+          </div>
+
+          <!-- Edu Card 3 -->
+          <div class="edu-card glass-card reveal-up">
+            <div class="edu-top">
+              <div class="edu-badge"><i class="fa-solid fa-school"></i> High School</div>
+              <span class="edu-year">2020 – 2021</span>
+            </div>
+            <h3 class="edu-degree">Higher Secondary Certificate (HSC 12th)</h3>
+            <h4 class="edu-institution"><i class="fa-solid fa-landmark"></i> Maharashtra State Board</h4>
+            <div class="edu-score">
+              <div class="score-pill">
+                <span class="score-label">Score</span>
+                <span class="score-value">84.80%</span>
+              </div>
+              <span class="score-honors">Distinction</span>
+            </div>
+            <p class="edu-desc">
+              Focused on Science and Mathematics foundation with strong quantitative problem-solving skills.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section section" id="contact">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <div class="section-tag"><i class="fa-regular fa-paper-plane"></i> Get In Touch</div>
+          <h2 class="section-title">Let's Build Something <span class="gradient-text">Amazing</span></h2>
+          <p class="section-subtitle">Have a project, job opportunity, or just want to talk tech? My inbox is always open!</p>
+        </div>
+
+        <div class="contact-wrapper">
+          <!-- Direct Contact Cards -->
+          <div class="contact-info-column reveal-up">
+            <div class="contact-card glass-card">
+              <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div class="contact-details">
+                <span class="contact-type">Email Address</span>
+                <a href="mailto:shrikantaher2004@gmail.com" class="contact-value" id="emailLink">shrikantaher2004@gmail.com</a>
+              </div>
+              <button class="copy-btn" data-copy="shrikantaher2004@gmail.com" title="Copy Email" aria-label="Copy Email">
+                <i class="fa-regular fa-copy"></i>
+              </button>
+            </div>
+
+            <div class="contact-card glass-card">
+              <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+              <div class="contact-details">
+                <span class="contact-type">Phone Number</span>
+                <a href="tel:+918149642840" class="contact-value">+91 8149642840</a>
+              </div>
+              <button class="copy-btn" data-copy="+918149642840" title="Copy Phone Number" aria-label="Copy Phone">
+                <i class="fa-regular fa-copy"></i>
+              </button>
+            </div>
+
+            <div class="contact-card glass-card">
+              <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="contact-details">
+                <span class="contact-type">Location</span>
+                <span class="contact-value">Pune, Maharashtra 411009</span>
+              </div>
+            </div>
+
+            <!-- Social Links Panel -->
+            <div class="social-connect-box glass-card">
+              <h4>Find Me Online</h4>
+              <div class="social-grid">
+                <a href="https://www.linkedin.com/in/shrikant-aher-2936382bb" target="_blank" rel="noopener noreferrer" class="social-panel-link">
+                  <i class="fa-brands fa-linkedin"></i>
+                  <span>LinkedIn</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square external-icon"></i>
+                </a>
+                <a href="https://github.com/Shrikant1a" target="_blank" rel="noopener noreferrer" class="social-panel-link">
+                  <i class="fa-brands fa-github"></i>
+                  <span>GitHub</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square external-icon"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-column glass-card reveal-up">
+            <form id="contactForm" class="contact-form">
+              <div class="form-header">
+                <h3>Send a Message</h3>
+                <p>I typically respond within 24 hours.</p>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="userName"><i class="fa-regular fa-user"></i> Your Name</label>
+                  <input type="text" id="userName" name="name" required placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                  <label for="userEmail"><i class="fa-regular fa-envelope"></i> Your Email</label>
+                  <input type="email" id="userEmail" name="email" required placeholder="john@example.com">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="userSubject"><i class="fa-solid fa-tag"></i> Subject</label>
+                <input type="text" id="userSubject" name="subject" required placeholder="Project Opportunity / Hello">
+              </div>
+
+              <div class="form-group">
+                <label for="userMessage"><i class="fa-regular fa-comment-dots"></i> Message</label>
+                <textarea id="userMessage" name="message" rows="5" required placeholder="Tell me about your project, role, or ideas..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-full form-submit-btn" id="submitBtn">
+                <span class="btn-text">Send Message</span>
+                <i class="fa-solid fa-paper-plane btn-icon"></i>
+                <div class="spinner" id="formSpinner"></div>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Project Details Interactive Modal -->
+  <div class="modal-overlay" id="projectModalOverlay">
+    <div class="modal-card glass-card" id="projectModalCard">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="modal-content-wrapper" id="modalDynamicContent">
+        <!-- Content will be injected dynamically via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- WhatsApp AI Bot Floating Widget -->
+  <div class="whatsapp-bot-wrapper" id="whatsappBotWrapper">
+    <!-- Floating Trigger Button -->
+    <button class="whatsapp-trigger-btn" id="whatsappTriggerBtn" aria-label="Chat with WhatsApp AI Bot" title="Chat with Shrikant's WhatsApp AI Bot">
+      <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
+      <span class="whatsapp-online-dot"></span>
+      <div class="whatsapp-tooltip">Chat with AI Assistant 💬</div>
+    </button>
+
+    <!-- WhatsApp AI Chat Modal / Window -->
+    <div class="whatsapp-chat-window glass-card" id="whatsappChatWindow">
+      <!-- Chat Header -->
+      <div class="whatsapp-chat-header">
+        <div class="whatsapp-avatar-wrap">
+          <img src="assets/shrikant-profile.jpg" alt="Shrikant Aher" class="whatsapp-avatar">
+          <span class="whatsapp-avatar-status"></span>
+        </div>
+        <div class="whatsapp-header-info">
+          <div class="whatsapp-bot-name">Shrikant's AI Assistant <i class="fa-solid fa-bolt ai-sparkle"></i></div>
+          <div class="whatsapp-bot-status" id="whatsappStatus">Online • Powered by AI</div>
+        </div>
+        <div class="whatsapp-header-actions">
+          <a href="https://wa.me/918149642840" target="_blank" rel="noopener noreferrer" class="whatsapp-direct-link" title="Open Real WhatsApp Chat" aria-label="Open in WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+          <button class="whatsapp-close-btn" id="whatsappCloseBtn" aria-label="Close Chat Window">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Chat Messages Container -->
+      <div class="whatsapp-chat-body" id="whatsappChatBody">
+        <div class="whatsapp-date-pill">Today</div>
+        
+        <!-- Messages will be dynamically rendered here -->
+      </div>
+
+      <!-- Quick Prompt Suggestions Chips -->
+      <div class="whatsapp-quick-chips" id="whatsappQuickChips">
+        <button class="chip-btn" data-msg="Tell me about Shrikant">⚡ Who is Shrikant?</button>
+        <button class="chip-btn" data-msg="What are your featured projects?">🚀 Featured Projects</button>
+        <button class="chip-btn" data-msg="What technical skills do you have?">🛠️ Tech Stack</button>
+        <button class="chip-btn" data-msg="How can I contact Shrikant directly?">📞 Contact Info</button>
+        <button class="chip-btn" data-msg="How do I download your resume?">📄 Download CV</button>
+      </div>
+
+      <!-- Chat Input Field -->
+      <form class="whatsapp-chat-footer" id="whatsappChatForm">
+        <input type="text" id="whatsappInput" placeholder="Ask Shrikant's AI anything..." autocomplete="off">
+        <button type="submit" class="whatsapp-send-btn" id="whatsappSendBtn" aria-label="Send message">
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Floating Scroll To Top Button -->
+  <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top" title="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <a href="#hero" class="logo">
+          <span class="logo-bracket">&lt;</span>
+          <span class="logo-text">SA</span>
+          <span class="logo-slash">/</span>
+          <span class="logo-bracket">&gt;</span>
+        </a>
+        <p>Crafting high-impact digital experiences and trustless blockchain infrastructure.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="currentYear"></span> Shrikant Aher. Built with passion & precision.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>

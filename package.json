@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "live-server --port=5500 --entry-file=index.html",
     "start": "live-server --port=5500 --entry-file=index.html",
-    "build": "echo \"Static build ready for deployment\"",
-    "serve": "serve . -p 5500"
+    "build": "node build.js",
+    "serve": "serve dist -p 5500"
   },
   "keywords": [
     "portfolio",
