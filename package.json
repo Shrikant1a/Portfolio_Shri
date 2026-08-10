@@ -1,0 +1,24 @@
+{
+  "name": "shrikant-aher-portfolio",
+  "version": "1.0.0",
+  "description": "Personal portfolio of Shrikant Aher - Software Developer & Blockchain Engineer",
+  "main": "index.html",
+  "scripts": {
+    "dev": "live-server --port=5500 --entry-file=index.html",
+    "start": "live-server --port=5500 --entry-file=index.html",
+    "serve": "serve . -p 5500"
+  },
+  "keywords": [
+    "portfolio",
+    "developer",
+    "blockchain",
+    "react",
+    "solidity",
+    "java"
+  ],
+  "author": "Shrikant Aher",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
